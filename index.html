@@ -209,6 +209,21 @@ footer a{color:#C9D4F5}
 .day-src b{color:var(--ink)}
 .day-cta{margin-top:24px}
 @media(max-width:520px){.day li{grid-template-columns:58px 1fr;gap:10px;padding:12px 14px}}
+
+.rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;counter-reset:r}
+.rules li{counter-increment:r;background:#fff;border:1px solid var(--paper-3);border-radius:var(--r-lg);padding:14px 16px 14px 54px;position:relative}
+.rules li:before{content:counter(r,decimal-leading-zero);position:absolute;left:14px;top:14px;font-weight:700;color:var(--sky-2);font-variant-numeric:tabular-nums}
+.rules b{display:block;color:var(--ink)}
+.rules span{color:var(--ink-2);font-size:.93rem}
+.rules-links{margin-top:18px;color:var(--ink-2);font-size:.95rem}
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:26px}
+.proof .n{background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-card);border-top:6px solid var(--yellow)}
+.proof .n strong{display:block;font-size:2rem;line-height:1.1;color:var(--ink)}
+.proof .n span{color:var(--ink-2);font-size:.95rem}
+.proof .n small{display:block;margin-top:8px;color:var(--ink-2);font-size:.8rem}
+.proof blockquote{margin:0;background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-card);border-top:6px solid var(--sky-2);font-weight:600;color:var(--ink);font-size:1.08rem}
+.proof blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:400;color:var(--ink-2);font-size:.88rem}
+@media(max-width:720px){.rules,.proof{grid-template-columns:1fr}}
 </style>
 <script>
 /* ?src= kanalas (fb, ig, qr, tamo...) keliauja į sekimą ir į formą */
@@ -370,14 +385,42 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         <li class="rv"><time>12:00</time><div><b>Pietūs ir laisvas žaidimas</b><span>Stalas be telefonų. Kalbamės gyvai.</span></div></li>
         <li class="rv"><time>13:00</time><div><b>Tylos pusvalandis</b><span>Knyga ir dienoraštis: ką šiandien pastebėjau apie save.</span></div></li>
         <li class="rv"><time>13:30</time><div><b>Kūrybos dirbtuvės</b><span>Komandos stato, piešia, kuria ir sprendžia užduotis su robotais.</span></div></li>
-        <li class="rv"><time>14:45</time><div><b>Stalo ir bendri žaidimai</b><span>Mokomės laukti eilės, pralaimėti ir susitarti.</span></div></li>
+        <li class="rv"><time>14:45</time><div><b>Stalo ir bendri žaidimai</b><span>Mokomės laukti eilės, pralaimėti ir susitarti. Vaidiname tikras situacijas: draugas nori fotografuoti, mama kalba telefonu.</span></div></li>
         <li class="rv"><time>15:45</time><div><b>Ramybės minutės</b><span>Kvėpavimo ir dėmesio pratimai, kuriuos galima pakartoti namie.</span></div></li>
-        <li class="rv"><time>16:15</time><div><b>Dienos ratas</b><span>Kas šiandien buvo įdomiau už ekraną? Vienas iššūkis šiam vakarui namuose.</span></div></li>
+        <li class="rv"><time>16:15</time><div><b>Dienos ratas</b><span>Kas šiandien buvo įdomiau už ekraną? Kiekvienas pasirašo savo „jei, tada“ kortelę šiam vakarui: „Jei man nuobodu, tada aš...“</span></div></li>
         <li class="rv"><time>17:00</time><div><b>Telefonai grįžta iš seifo</b><span>Tėvai pasiima vaikus.</span></div></li>
     </ol>
+    <p class="day-note rv"><b>1–2 klasės:</b> trumpesni užsiėmimai po 20–35 min., daugiau judesio ir žaidimo. <b>3–6 klasės:</b> ilgesni projektai, pokalbiai „kodėl“ ir savo šeimos susitarimo juodraštis.</p>
     <p class="day-note rv">Dienotvarkė preliminari. Tikslią, kartu su informacija apie maitinimą, atsiųsime patvirtinę stovyklą.</p>
-    <p class="day-src rv"><b>Kuo remiamės.</b> Programą įkvėpė Jonathano Haidto knyga „The Anxious Generation“, jo ir Catherine Price knyga vaikams „The Amazing Generation“ bei Catherine Price „How to Break Up with Your Phone“. Jų mintis paprasta: vien atimti telefoną neužtenka, jo vietą turi užimti žaidimas, judesys, draugai ir savarankiškumas.</p>
+    <p class="day-src rv"><b>Kuo remiamės.</b> Programą įkvėpė Jonathano Haidto knyga „The Anxious Generation“, jo ir Catherine Price knyga jaunimui „The Amazing Generation“ bei Catherine Price „How to Break Up with Your Phone“. Jų mintis paprasta: vien atimti telefoną neužtenka, jo vietą turi užimti žaidimas, judesys, draugai ir savarankiškumas. Sakome atvirai: mokslininkai nesutaria, kiek ekranai veikia vaikų savijautą, o kelių dienų stovykla įpročio nesukuria. Ji jį pradeda, tęsia šeima.</p>
     <p class="day-cta rv"><a class="btn btn-yellow" href="#sarasas">Įsirašyti į sąrašą →</a></p>
+  </div>
+</section>
+
+<section class="blk paper" id="taisykles" aria-labelledby="h-rules">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Technologijų etiketas</span>
+      <h2 id="h-rules">10 taisyklių, kurias vaikai išmoks ir parsineš namo</h2>
+      <p>Tai ne draudimų sąrašas ir niekas negauna baudų. Tai manieros: susitarimas, kurį galima švelniai priminti, kaip primenam „ačiū“ ir „prašau“.</p>
+    </div>
+    <div class="proof">
+      <blockquote class="rv">„Stalo etiketą mes turim. Technologijų etiketo neturim. Todėl jo ir nesilaikom.“<cite>Kristijonas Vasiliauskas, technologijų etiketo autorius</cite></blockquote>
+      <div class="n rv"><strong>37 iš 40</strong><span>tėvų pasakė, kad rinktųsi būrelį be telefonų.</span><small>Technologijų etiketo testas tėvams, pirmoji diena, 2026-10-19. Testą kūrė Kristijonas, Robotikos akademijos bendraįkūrėjas.</small></div>
+    </div>
+    <ol class="rules">
+        <li class="rv"><b>Žiūrėk į akis</b><span>Kai kas nors su tavim kalba, ekraną padedi.</span></li>
+        <li class="rv"><b>Valgom be ekranų</b><span>Prie stalo pasakojam, kaip praėjo diena.</span></li>
+        <li class="rv"><b>Tylus ekranas</b><span>Pranešimai išjungti. Žaidimas ir žinutės palauks.</span></li>
+        <li class="rv"><b>Pirma paklausk</b><span>Nori nufotografuoti draugą? Pirma: „ar galima?“</span></li>
+        <li class="rv"><b>Skambutis? Atsiprašau</b><span>Pasakyk „atsiprašau“ ir išeik pakalbėti.</span></li>
+        <li class="rv"><b>Laikmatis pirmas</b><span>Prieš žaidimą kartu su tėvais nustatai laiką.</span></li>
+        <li class="rv"><b>Pilkas ekranas</b><span>Spalvos traukia akis. Nespalvotas ekranas ramesnis.</span></li>
+        <li class="rv"><b>Vienas dalykas</b><span>Ruoši pamokas? Telefonas kitame kambaryje.</span></li>
+        <li class="rv"><b>Telefonas miega virtuvėje</b><span>Naktį ekranas kraunasi ne tavo kambaryje.</span></li>
+        <li class="rv"><b>Pasakyk, kai padėjo DI</b><span>Iki 13 metų DI tik su suaugusiu.</span></li>
+    </ol>
+    <p class="rules-links rv">Taisykles galite išbandyti jau šį vakarą: <a href="https://krisvas333.github.io/neuron-ar/te/vaikams/?src=techdetox" target="_blank" rel="noopener" data-cta="te-vaikams">versija vaikams</a> · <a href="https://krisvas333.github.io/neuron-ar/te/technologiju-etiketas-seimoms-A4.pdf" target="_blank" rel="noopener" data-cta="te-a4">A4 lapas ant šaldytuvo (PDF)</a> · <a href="https://krisvas333.github.io/neuron-ar/te/apie/?src=techdetox" target="_blank" rel="noopener" data-cta="te-apie">ką sako mokslas</a></p>
   </div>
 </section>
 
@@ -392,6 +435,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         <h3><span class="e" aria-hidden="true">🏠</span>Namo</h3>
         <ul>
           <li>Savo šeimos technologijų etiketas, pasirašytas kartu su tėvais.</li>
+          <li>Savo <b>„jei, tada“ kortelės</b>: ką darau, kai nuobodu, pikta ar ranka pati tiesiasi prie telefono.</li>
           <li>Konkretūs įpročiai: telefonai miega ne miegamajame, stalas be telefonų, laikmatis prieš žaidimą.</li>
           <li>Frazės, kuriomis galima sustabdyti save ir pasakyti „ne dabar“.</li>
         </ul>
@@ -447,6 +491,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     <details class="rv"><summary>Ar įsirašius reikia mokėti?</summary><p>Ne. Tai laukiančiųjų sąrašas. Mokėti reikės tik tada, kai stovykla bus patvirtinta ir jūs patys užsiregistruosite.</p></details>
     <details class="rv"><summary>Kas bus, jei nesusirinks 10 vaikų?</summary><p>Stovykla neįvyks, o mes jums apie tai parašysime el. paštu. Nieko mokėti nereikės.</p></details>
     <details class="rv"><summary>Ar vaikai visai nenaudos technologijų?</summary><p>Telefonai ryte keliauja į „seifą“. Mokomės ne bijoti technologijų, o protingai su jomis elgtis.</p></details>
+    <details class="rv"><summary>Ką reiškia „detox“?</summary><p>Pertrauką nuo telefono ir treniruotę, ne gydymą. Nežadame, kad po stovyklos vaikas pats padės telefoną. Žadame, kad jis žinos taisykles, turės savo planą ir bus išbandęs, ką veikti vietoj ekrano. Toliau įprotį augina šeima.</p></details>
     <details class="rv"><summary>Kiek vaikų bus stovykloje?</summary><p>Iki 30 vaikų, dviejose amžiaus grupėse: 1–2 ir 3–6 klasės. Visą dieną su vaikais dirba du mokytojai.</p></details>
     <details class="rv"><summary>Ar galima rinktis abi savaites?</summary><p>Taip. Formoje pažymėkite abi savaites, o kai stovykla bus patvirtinta, suderinsime detales.</p></details>
     <details class="rv"><summary>Kokius duomenis renkate?</summary><p>Tik jūsų vardą, el. paštą, (jei norite) telefoną, pasirinktas savaites ir amžiaus grupę. Vaiko vardo dabar neprašome. Duomenis naudojame tik šiai stovyklai suburti: jie ateina organizatoriui el. paštu (per FormSubmit paslaugą).</p></details>
