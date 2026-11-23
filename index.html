@@ -224,6 +224,19 @@ footer a{color:#C9D4F5}
 .proof blockquote{margin:0;background:#fff;border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-card);border-top:6px solid var(--sky-2);font-weight:600;color:var(--ink);font-size:1.08rem}
 .proof blockquote cite{display:block;margin-top:10px;font-style:normal;font-weight:400;color:var(--ink-2);font-size:.88rem}
 @media(max-width:720px){.rules,.proof{grid-template-columns:1fr}}
+
+.ages{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.ages div{background:#fff;border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow-card);border-top:6px solid var(--sky-2)}
+.ages div.on{border-top-color:var(--yellow)}
+.ages small{display:block;color:var(--ink-2);font-size:.85rem}
+.ages b{display:block;font-size:1.25rem;color:var(--ink);margin:2px 0 6px}
+.ages span{color:var(--ink-2);font-size:.9rem}
+.src-line{color:var(--ink-2);font-size:.88rem;margin-top:12px}
+.src-line a,.watch a{color:inherit}
+.watch{margin:8px 0 0;padding-left:20px;color:var(--ink-2)}
+.watch li{margin-bottom:8px}
+.watch b{color:var(--ink)}
+@media(max-width:720px){.ages{grid-template-columns:1fr 1fr}}
 </style>
 <script>
 /* ?src= kanalas (fb, ig, qr, tamo...) keliauja į sekimą ir į formą */
@@ -424,6 +437,47 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   </div>
 </section>
 
+<section class="blk" id="amzius" aria-labelledby="h-age">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Pagal amžių</span>
+      <h2 id="h-age">Kiek ekrano ir ko vietoj jo</h2>
+      <p>Vilniaus universiteto tyrėjų gairės tėvams. Tai rekomendacijos, ne įstatymas.</p>
+    </div>
+    <div class="ages">
+      <div class="rv"><small>Iki 2 metų</small><b>Be ekranų</b><span>Veidas, balsas, žaislai.</span></div>
+      <div class="rv"><small>2–5 metai</small><b>Iki 1 val.</b><span>Tik kartu su suaugusiu.</span></div>
+      <div class="rv on"><small>6–10 metų · mūsų 1–4 klasės</small><b>Iki 2 val.</b><span>Aiškios, paprastos taisyklės ir daug judesio.</span></div>
+      <div class="rv on"><small>11–14 metų · mūsų 5–6 klasės</small><b>Iki 3 val.</b><span>Taisyklės kuriamos kartu, su „kodėl“.</span></div>
+    </div>
+    <p class="day-note rv">Tos pačios gairės: kasdien bent 1 valanda judesio ir bent 1 valanda lauke, valgome be ekranų, naktį įrenginiai ne miegamajame.</p>
+    <p class="src-line rv">Šaltinis: Vilniaus universiteto projekto „Ilgalaikis ekranų poveikis vaikų fizinei ir psichikos sveikatai“ <a href="https://mediavaikai.fsf.vu.lt/uploads/rekomendacijos_tevams_globejams_vaiku_sveikata_e6fe7b0bac.pdf" target="_blank" rel="noopener" data-cta="vu-gaires">rekomendacijos tėvams (PDF)</a>.</p>
+    <div class="two" style="margin-top:26px">
+      <div class="box rv">
+        <h3><span class="e" aria-hidden="true">🤝</span>Ko mokomės vietoj ekrano</h3>
+        <ul>
+          <li><b>Gyvas pokalbis:</b> žiūrėti į akis, klausytis, prisijungti prie žaidimo, susirasti draugą.</li>
+          <li><b>Judesys ir nuotykis:</b> tikros užduotys ir žaidimai, ne nuotykiai ekrane.</li>
+          <li><b>Savo projektas:</b> sugalvoti, suplanuoti, padaryti ir parodyti kitiems.</li>
+          <li><b>Komanda:</b> bendras vardas, bendros taisyklės, kiekvienas turi savo vaidmenį.</li>
+          <li><b>Tikslas ir planas:</b> vienas mažas tikslas ir „jei, tada“ kortelė namams.</li>
+        </ul>
+      </div>
+      <div class="box y rv">
+        <h3><span class="e" aria-hidden="true">🏠</span>Lapas tėvams į namus</h3>
+        <ul>
+          <li><b>Pomėgiai:</b> kaip išbandyti tris ir pasirinkti vieną.</li>
+          <li><b>Namų darbai kartu:</b> gaminti, tvarkyti kambarį, sportuoti, rašyti dienoraštį.</li>
+          <li><b>Laikas ir pinigai:</b> dienos planas ir pirmieji kišenpinigiai.</li>
+          <li><b>Vertybės:</b> kas mūsų šeimai svarbu ir kodėl.</li>
+          <li><b>Būrelio pasirinkimas:</b> klausimai, kurie padeda rinktis bet kurį būrelį. Atvirai: stovyklą rengia būrelių organizatorius, todėl ši dalis be reklamos.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="day-note rv">Veiklos sukurtos kiekvienai amžiaus grupei atskirai. Tai mūsų pedagoginis sprendimas: tyrimų, kurie lygintų 6–8 ir 9–12 metų vaikus tokioje stovykloje, neradome.</p>
+  </div>
+</section>
+
 <section class="blk" id="po-stovyklos" aria-labelledby="h-after">
   <div class="wrap">
     <div class="sec-head rv">
@@ -482,6 +536,27 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       <div class="week rv"><small>2 savaitė</small><div class="d">Gruodžio 28–31 d.</div><div class="n">4 dienos · 9:00–17:00</div><div class="pr">200 € <span>už 4 dienas</span></div></div>
     </div>
     <div class="groups rv"><b>Amžiaus grupės:</b><span class="g">1–2 klasės</span><span class="g">3–6 klasės</span></div>
+  </div>
+</section>
+
+<section class="blk faq" id="mokslas" aria-labelledby="h-sci">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Tėvams</span><h2 id="h-sci">Ką sako tyrimai ir ką verta pažiūrėti</h2>
+    <p>Mokslininkai nesutaria, kiek ekranai kenkia. Sutaria dėl žaidimo, savarankiškumo ir miego. Rodome abi puses.</p></div>
+    <details class="rv"><summary>Ar trumpa pertrauka nuo ekranų ką nors keičia?</summary><p>Danijoje 89 šeimos dvi savaites atidavė telefonus ir planšetes, o laisvalaikio ekranams skyrė ne daugiau kaip 3 valandas per savaitę. Tėvų vertinimu, vaikų emocinių ir bendravimo sunkumų sumažėjo. Tyrimas trumpas, o tėvai žinojo, kuriai grupei priklauso. Šaltinis: Schmidt-Persson ir kt., JAMA Network Open, 2024.</p></details>
+    <details class="rv"><summary>Ar poveikis išlieka?</summary><p>Dažniausiai ne savaime. Austrijoje 111 studentų tris savaites telefoną naudojo ne ilgiau kaip 2 valandas per dieną: nuotaika ir miegas pagerėjo, bet po šešių savaičių ekranų laikas buvo beveik toks pat kaip anksčiau. Todėl iš stovyklos vaikas parsineša planą, ne tik patirtį. Šaltinis: Pieh ir kt., BMC Medicine, 2025.</p></details>
+    <details class="rv"><summary>Kodėl kviečiate įsitraukti tėvus?</summary><p>204 tyrimų apžvalgoje programos, skirtos tėvams, veikė stipriau nei programos tik vaikams, o programos su tikslu ir planu veikė stipriau nei be jų. Bendras poveikis vis tiek mažas. Šaltinis: Jones ir kt., International Journal of Behavioral Nutrition and Physical Activity, 2021.</p></details>
+    <details class="rv"><summary>Ar užtenka uždrausti telefonus mokykloje?</summary><p>Anglijoje 30 mokyklų tyrime mokyklose su griežtomis taisyklėmis mokiniai per pamokų dieną telefoną naudojo apie 40 minučių mažiau, bet bendras naudojimas ir savijauta nesiskyrė. Svarbu ir tai, kas vyksta namuose. Šaltinis: Goodyear ir kt., The Lancet Regional Health Europe, 2025.</p></details>
+    <details class="rv"><summary>Ką pažiūrėti ir paskaityti?</summary>
+      <ul class="watch">
+        <li><b>Jonathan Haidt</b>, TED 2026: <a href="https://www.ted.com/talks/jonathan_haidt_why_you_should_be_a_techno_skeptic" target="_blank" rel="noopener">kaip ekranai pakeitė vaikystę</a>. Knyga „The Anxious Generation“.</li>
+        <li><b>Candice Odgers</b>, TED 2026: <a href="https://www.ted.com/talks/candice_odgers_what_we_re_getting_wrong_about_teens_and_tech" target="_blank" rel="noopener">ką apie paauglius ir technologijas suprantame klaidingai</a>. Kita pusė: duomenys panikos nepatvirtina.</li>
+        <li><b>Catherine Price</b>, TED 2022: <a href="https://www.ted.com/talks/catherine_price_why_having_fun_is_the_secret_to_a_healthier_life" target="_blank" rel="noopener">kodėl tikras džiaugsmas yra sveikatos reikalas</a>. Knyga „How to Break Up with Your Phone“.</li>
+        <li><b>Lenore Skenazy</b>, TED 2025: <a href="https://www.ted.com/talks/lenore_skenazy_why_you_should_spend_less_time_with_your_kids" target="_blank" rel="noopener">kodėl vaikams reikia daugiau savarankiškumo</a>.</li>
+        <li><b>Pete Etchells</b>, knyga „Unlocked: The Real Science of Screen Time“: ramus žvilgsnis į tai, ką tyrimai iš tikrųjų rodo.</li>
+        <li><b>Lietuvoje:</b> VU projektas „Media vaikai“ ir Vaikų linija 116 111.</li>
+      </ul>
+    </details>
   </div>
 </section>
 
