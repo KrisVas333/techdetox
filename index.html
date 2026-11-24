@@ -632,7 +632,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     <details class="rv"><summary>Ką reiškia „detox“?</summary><p>Tai pertrauka nuo telefono ir treniruotė, ne gydymas. Nežadame, kad po stovyklos vaikas pats padės telefoną. Žadame, kad jis žinos taisykles, turės savo planą ir bus išbandęs, ką veikti vietoj ekrano. Toliau įprotį ugdo šeima.</p></details>
     <details class="rv"><summary>Kiek vaikų bus stovykloje?</summary><p>Iki 30 vaikų, dviejose amžiaus grupėse: 1–2 ir 3–6 klasės. Visą dieną su vaikais dirba du mokytojai.</p></details>
     <details class="rv"><summary>Ar galima rinktis abi savaites?</summary><p>Taip. Formoje pažymėkite abi savaites, o kai stovykla bus patvirtinta, suderinsime detales.</p></details>
-    <details class="rv"><summary>Kokius duomenis renkate?</summary><p>Tik jūsų vardą, el. paštą, telefoną (jei norite), pasirinktas savaites, amžiaus grupę ir vaikų skaičių. Vaiko vardo dabar neprašome. Duomenis naudojame tik šiai stovyklai organizuoti: jie siunčiami organizatoriui el. paštu per „FormSubmit“ paslaugą.</p></details>
+    <details class="rv"><summary>Kokius duomenis renkate?</summary><p>Tik jūsų vardą, el. paštą, telefoną (jei norite), pasirinktas savaites, amžiaus grupę ir vaikų skaičių. Vaiko vardo dabar neprašome. Duomenis naudojame tik šiai stovyklai organizuoti: jie saugomi Robotikos akademijos laukiančiųjų sąraše, o jūs gaunate patvirtinimo laišką.</p></details>
     <details class="rv"><summary>Ką paskaityti tėvams ir vaikams?</summary><ul class="watch"><li><b>Jonathan Haidt, „The Anxious Generation“ (2024).</b> Kodėl vaikystė persikėlė iš kiemo į telefoną ir ką siūlo keisti. Kritikai sako, kad priežastinis ryšys dar neaiškus.</li><li><b>Catherine Price, „How to Break Up with Your Phone“ (2018, atnaujinta 2025).</b> 30 dienų planas suaugusiems: vaikai mokosi iš to, ką daro tėvai.</li><li><b>Jonathan Haidt ir Catherine Price, „The Amazing Generation“ (2025).</b> Parašyta patiems vaikams, maždaug 9–12 metų, su komiksais ir iššūkiais.</li></ul><p>Knygos anglų kalba. Jų idėjas stovykloje pritaikome vaikams žaisdami.</p></details>
     <details class="rv"><summary>Ką sako tyrimai?</summary><p>Mokslininkai nesutaria, kiek ekranai kenkia vaikams. Tačiau sutaria, kad vaikams reikia žaidimo, savarankiškumo ir miego.</p><ul class="watch"><li><b>Trumpa pertrauka padeda.</b> Danijoje 89 šeimos dvi savaites beveik nenaudojo ekranų laisvalaikiu. Tėvų vertinimu, vaikų emocinių ir bendravimo sunkumų sumažėjo. Tyrimas trumpas, o tėvai žinojo, kuriai grupei priklauso (Schmidt-Persson ir kt., JAMA Network Open, 2024).</li><li><b>Po pertraukos įprotis grįžta.</b> Austrijoje 111 studentų tris savaites ribojo telefoną iki 2 valandų per dieną. Po šešių savaičių ekranų laikas buvo beveik toks pat kaip anksčiau (Pieh ir kt., BMC Medicine, 2025).</li><li><b>Tėvų įsitraukimas svarbus.</b> 204 tyrimų apžvalgoje programos tėvams veikė stipriau nei programos tik vaikams. Dauguma tų tyrimų buvo su ikimokyklinukais, o bendras poveikis mažas (Jones ir kt., 2021).</li><li><b>Vien mokyklos taisyklių neužtenka.</b> Anglijoje ištyrus 30 mokyklų, mokiniai mokyklose su griežtomis taisyklėmis per mokyklos dieną telefoną naudojo apie 30 min. mažiau, bet bendras naudojimas ir savijauta nesiskyrė. Tai stebimasis tyrimas, 1 227 mokiniai nuo 12 iki 15 metų (Goodyear ir kt., The Lancet Regional Health Europe, 2025).</li><li><b>Lietuvos gairės.</b> Vilniaus universiteto tyrėjai 6–10 metų vaikams pataria iki 1 valandos ekrano pramogoms per dieną (iš viso iki 2), 11–14 metų iki 2 valandų pramogoms (iš viso iki 3): <a href="https://mediavaikai.fsf.vu.lt/uploads/rekomendacijos_tevams_globejams_vaiku_sveikata_e6fe7b0bac.pdf" target="_blank" rel="noopener" data-cta="vu-gaires">rekomendacijos tėvams (PDF)</a>.</li><li><b>Abi pusės:</b> <a href="https://www.ted.com/talks/jonathan_haidt_why_you_should_be_a_techno_skeptic" target="_blank" rel="noopener">Jonathan Haidt</a> ir jo kritikė <a href="https://www.ted.com/talks/candice_odgers_what_we_re_getting_wrong_about_teens_and_tech" target="_blank" rel="noopener">Candice Odgers</a> (TED, 2026). Daugiau šaltinių: <a href="https://krisvas333.github.io/neuron-ar/te/apie/?src=techdetox" target="_blank" rel="noopener">ką sako mokslas</a>.</li></ul></details>
   </div>
@@ -699,6 +699,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 (function(){
   'use strict';
   var MAIL_URL='https://formsubmit.co/ajax/kristijonas.vasiliauskas@gmail.com';
+  var DB_URL='https://iiekmeylpppczicrsxho.supabase.co/rest/v1/ra_waitlist',DB_KEY='sb_publishable_iJC59f30YJm7hU4OwZsLDQ_9FN-ygzF';
   var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
   function track(n,p){try{if(window.umami&&umami.track)umami.track(n,p||{})}catch(e){}}
 
@@ -739,10 +740,16 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       'Amžiaus grupė':grp.map(function(g){return g.replace('-','–')+' kl.'}).join('; '),
       'Vaikų skaičius':String(kids),'Šaltinis (src)':window.RA_SRC,'Puslapio versija':window.RA_VERSION
     };
-    /* Kiekvienas įrašas keliauja laišku organizatoriui (FormSubmit). RA ra_waitlist šio produkto nepriima (product_check), todėl DB nenaudojama. */
-    fetch(MAIL_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(mail)})
+    /* Įrašas keliauja į RA laukiančiųjų lentelę (Supabase ra_waitlist): iš ten organizatoriai gauna pranešimą, o tėvai patvirtinimo laišką. Jei lentelė nepasiekiama, atsarginis kelias yra laiškas per FormSubmit. */
+    var row={product:'techdetox',parent_name:name.slice(0,80),email:email,phone:f.phone.value.trim()||null,
+      child_age:grp.map(function(g){return g+' kl.'}).join('; ').slice(0,20),preferred_day:weeks.join('; ').slice(0,60),interest:String(kids),
+      src:String(window.RA_SRC||'').slice(0,60)||null,consent_contact:true,consent_text_version:'td-v1',lead_type:'tevai',page_version:'techdetox'};
+    function viaMail(){return fetch(MAIL_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(mail)})
       .then(function(r){return r.json().catch(function(){return {}}).then(function(j){return r.ok&&String(j.success)==='true'})})
-      .catch(function(){return false})
+      .catch(function(){return false})}
+    fetch(DB_URL,{method:'POST',headers:{'Content-Type':'application/json','apikey':DB_KEY,'Authorization':'Bearer '+DB_KEY,'Prefer':'return=minimal'},body:JSON.stringify(row)})
+      .then(function(r){return r.ok}).catch(function(){return false})
+      .then(function(ok){if(ok)return true;track('error',{form:'waitlist',why:'db_failed'});return viaMail()})
       .then(function(ok){
         if(ok){track('value',{step:'waitlist_submit',savaites:weeks.join('+'),grupe:grp.join('+'),vaikai:kids});done()}
         else{fail('mail_failed')}
