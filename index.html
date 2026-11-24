@@ -280,6 +280,12 @@ details.more .day li{border:0;border-top:1px solid var(--paper-3);border-radius:
 .steps:before{top:18px}
 }
 @media (prefers-reduced-motion:reduce){.pdf-thumb{transition:none}}
+
+/* v21 video */
+.vid{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-soft);background:var(--night);max-width:860px}
+.vid video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.vid-note{margin-top:10px;color:var(--ink-3);font-size:.85rem;max-width:860px}
+.vid-text{color:var(--ink-2);font-size:.95rem;margin:10px 0 0}
 </style>
 <script>
 /* ?src= kanalas (fb, ig, qr, tamo...) keliauja į sekimą ir į formą */
@@ -364,6 +370,26 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       </ul>
     </div>
     <p class="wl-line rv"><b>Tai laukiančiųjų sąrašas.</b> Įsirašydami nieko nemokate. Jei įsirašys bent 10 vaikų, parašysime el. paštu, kaip užsiregistruoti ir apmokėti. Jei ne, stovykla neįvyks ir nieko nemokėsite.</p>
+  </div>
+</section>
+
+<section class="blk" id="kvietimas" aria-labelledby="h-vid">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Kvietimas per 35 sekundes</span>
+      <h2 id="h-vid">Kristijonas kviečia į stovyklą</h2>
+    </div>
+    <div class="vid rv">
+      <video id="kv-video" controls playsinline preload="none" poster="techdetox-poster.jpg" width="1920" height="1080">
+        <source src="techdetox-web.mp4" type="video/mp4">
+        Jūsų naršyklė nerodo vaizdo įrašo. <a href="techdetox-web.mp4">Atsisiųskite jį čia</a>.
+      </video>
+    </div>
+    <p class="vid-note rv">Vaizdo įrašas sukurtas su dirbtinio intelekto avataru: Kristijono išvaizda ir balsas, tekstas jo paties.</p>
+    <details class="more rv"><summary>Vaizdo įrašo tekstas</summary>
+      <p class="vid-text">Kiek kartų šiandien jūsų vaikas pakėlė telefoną? Labas, aš Kristijonas iš Robotikos akademijos. Per žiemos atostogas kviečiu vaikus nuo pirmos iki šeštos klasės į Tech detox stovyklą. Visą dieną be telefonų: judesys, žaidimai ir kūryba su robotais. Vaikai išmoks dešimt technologijų etiketo taisyklių. Pasirašys savo šeimos susitarimą. O jūs gausite keturių savaičių planą, kad įprotis liktų namuose. Tyrimai rodo: be plano poveikis greitai išblėsta (Pieh ir kt., BMC Medicine, 2025). Vietų trisdešimt. Mokėti dabar nereikia. Įsirašykite į laukiančiųjų sąrašą: techdetox.lt.</p>
+    </details>
+    <p class="day-cta rv"><a class="btn btn-yellow" href="#sarasas" data-cta="video-join">Įsirašyti į sąrašą →</a></p>
   </div>
 </section>
 
@@ -646,6 +672,12 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   function fail(why){var btn=$('#f-btn');btn.disabled=false;btn.textContent='Bandyti dar kartą';err('submit',1);track('error',{form:'waitlist',why:why})}
   function done(){f.style.display='none';var t=$('#thanks');t.style.display='block';t.focus();t.scrollIntoView({block:'center',behavior:'smooth'})}
 })();
+</script>
+<script>
+(function(){var v=document.getElementById('kv-video');if(!v)return;var s=0,e=0;
+function t(n){try{if(typeof track==='function')track(n,{where:'kvietimas'});else if(window.bt)window.bt(n,{where:'kvietimas'})}catch(x){}}
+v.addEventListener('play',function(){if(!s){s=1;t('video_play')}});
+v.addEventListener('ended',function(){if(!e){e=1;t('video_end')}});})();
 </script>
 </body>
 </html>
