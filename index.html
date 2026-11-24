@@ -698,7 +698,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script>
 (function(){
   'use strict';
-  var MAIL_URL='https://formsubmit.co/ajax/povilas@robotikosakademija.lt';
+  var MAIL_URL='https://formsubmit.co/ajax/kristijonas.vasiliauskas@gmail.com';
   var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
   function track(n,p){try{if(window.umami&&umami.track)umami.track(n,p||{})}catch(e){}}
 
@@ -733,7 +733,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     var kids=Math.max(1,Math.min(6,parseInt(f.kids.value,10)||1));
     var WK={'12-21_22':'Gruodžio 21–22 d. (2 d., 100 €)','12-28_31':'Gruodžio 28–31 d. (4 d., 200 €)'};
     var mail={
-      _subject:'Stovykla: naujas įrašas į laukiančiųjų sąrašą ('+name.slice(0,40)+')',_template:'table',_captcha:'false',
+      _subject:'Stovykla: naujas įrašas į laukiančiųjų sąrašą ('+name.slice(0,40)+')',_template:'table',_captcha:'false',_cc:'povilas@robotikosakademija.lt',
       'Vardas':name,'El. paštas':email,'Telefonas':f.phone.value.trim()||'-',
       'Savaitė(s)':weeks.map(function(w){return WK[w]||w}).join('; '),
       'Amžiaus grupė':grp.map(function(g){return g.replace('-','–')+' kl.'}).join('; '),
