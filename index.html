@@ -286,6 +286,28 @@ details.more .day li{border:0;border-top:1px solid var(--paper-3);border-radius:
 .vid video{display:block;width:100%;height:auto;aspect-ratio:16/9}
 .vid-note{margin-top:10px;color:var(--ink-3);font-size:.85rem;max-width:860px}
 .vid-text{color:var(--ink-2);font-size:.95rem;margin:10px 0 0}
+
+/* v22 day motion */
+.dayline{margin:0 0 18px}
+.dl-track{position:relative;height:10px;border-radius:10px;background:var(--paper-3);margin:8px 10px 0}
+.dl-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:10px;background:linear-gradient(90deg,var(--yellow),var(--sky-2));animation:dlfill 14s linear infinite}
+.dl-track i{position:absolute;top:-4px;width:4px;height:18px;margin-left:-2px;border-radius:4px;background:var(--ink);opacity:.35}
+.dl-dot{position:absolute;top:50%;left:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:var(--yellow);border:3px solid #fff;box-shadow:0 4px 12px -2px rgba(10,20,60,.45);animation:dldot 14s linear infinite}
+.dl-ends{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:.8rem;font-weight:600;color:var(--ink-2)}
+.dl-ends span:last-child{text-align:right}
+.day.day-key li{animation:dlrow 14s linear infinite}
+.day.day-key li .ic{animation:dlic 14s ease-in-out infinite}
+.day.day-key li:nth-child(1){animation-delay:0.00s}.day.day-key li:nth-child(1) .ic{animation-delay:0.00s}
+.day.day-key li:nth-child(2){animation-delay:0.75s}.day.day-key li:nth-child(2) .ic{animation-delay:0.75s}
+.day.day-key li:nth-child(3){animation-delay:2.64s}.day.day-key li:nth-child(3) .ic{animation-delay:2.64s}
+.day.day-key li:nth-child(4){animation-delay:6.77s}.day.day-key li:nth-child(4) .ic{animation-delay:6.77s}
+.day.day-key li:nth-child(5){animation-delay:10.91s}.day.day-key li:nth-child(5) .ic{animation-delay:10.91s}
+
+@keyframes dlfill{0%{width:0}86%{width:100%}96%{width:100%;opacity:1}100%{width:100%;opacity:0}}
+@keyframes dldot{0%{left:0}86%{left:100%}96%{left:100%;opacity:1}100%{left:100%;opacity:0}}
+@keyframes dlrow{0%,13%{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(254,196,4,.45)}19%,100%{border-color:var(--paper-3);box-shadow:none}}
+@keyframes dlic{0%{transform:scale(1)}4%{transform:scale(1.18) rotate(-6deg)}9%{transform:scale(1.1) rotate(5deg)}14%,100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.dl-fill,.dl-dot,.day.day-key li,.day.day-key li .ic{animation:none}.dl-fill{width:100%}.dl-dot{display:none}}
 </style>
 <script>
 /* ?src= kanalas (fb, ig, qr, tamo...) keliauja į sekimą ir į formą */
@@ -429,6 +451,10 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       <span class="kicker">Viena diena</span>
       <h2 id="h-day">Kaip atrodys stovyklos diena</h2>
       <p>Aštuonios valandos be telefono: judesys, draugai, kūryba ir ramybė, kurių ekranas neduoda.</p>
+    </div>
+    <div class="dayline rv" aria-hidden="true">
+      <div class="dl-track"><div class="dl-fill"></div><i style="left:0%"></i><i style="left:6.25%"></i><i style="left:21.9%"></i><i style="left:56.25%"></i><i style="left:90.6%"></i><b class="dl-dot"></b></div>
+      <div class="dl-ends"><span>9:00 telefonai į seifą</span><span>17:00 telefonai grįžta</span></div>
     </div>
     <ol class="day day-key">
         <li class="rv"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></i><time>9:00</time><div><b>Telefonai į seifą ir ryto ratas</b><span>Kiekvienas pasako, kaip šiandien jaučiasi. Mokomės pavadinti emociją.</span></div></li>
